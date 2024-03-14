@@ -1,3 +1,10 @@
+###  DATE: 14.03.2024
+
+###  NAME: Dharshini DS
+###  ROLL NO : 212221230022
+###  DEPARTMENT: AIDS
+
+
 # EXPERIMENT NO 05 INTERFACING ANALOG OUTPUT SERVO MOTOR WITH ARDUINO
 
 ### AIM
@@ -68,13 +75,45 @@ CIRCUIT DIAGRAM
 
 ### PROGRAM :
  
+```
+#include <Servo.h>
+Servo myservo;
+int pos = 0;
+
+void setup()
+{
+  myservo.attach(9);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  for(pos=0;pos<=180;pos+=1)
+  {
+    myservo.write(pos);
+    delay(20);
+    //Serial.print("Angel=");
+    Serial.println(pos);
+    
+  }
+  for(pos=180;pos>=0;pos-=1)
+  {
+    myservo.write(pos);
+    delay(20);
+    //Serial.print("Angel=");
+    Serial.println(pos);
+    
+  }
+  
+}
+```
+### OUTPUT:
 
 
+![533ex5](https://github.com/Dharshini-DS/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/assets/93427345/b3dda238-e3a5-49ec-b24e-93e36da9cdc6)
 
 
-
-
-
+![533ex5i](https://github.com/Dharshini-DS/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/assets/93427345/0aa45e21-a3c5-49cd-98f2-78f5a8cf0e2c)
 
 
 ### RESULTS: 
